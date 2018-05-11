@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <input type="text"/>
+    <button class="btn btn-primary" (click)="enableAddServer();">
+      {{buttonName}}
+    </button>
+    <button class="btn btn-primary" [disabled]="isDisabled">
+      Add Server
+    </button>
+  </div>
+</div>
