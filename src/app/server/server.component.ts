@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
-  buttonName='Enable Add Server';
-
   isDisabled=true;
 
   constructor() { }
@@ -17,8 +15,8 @@ export class ServerComponent implements OnInit {
   }
 
   enableAddServer(){
+    alert('enableAddServer() called....')
     this.isDisabled=false;
-    this.buttonName='Disable Add Server';
   }
 
 }

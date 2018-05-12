@@ -1,9 +1,12 @@
 <div class="container">
   <div class="row">
     <input type="text"/>
-    <button class="btn btn-primary" (click)="enableAddServer();">
-      {{buttonName}}
+    <!--event binding: html > .ts -->
+    <button class="btn btn-primary" (click)="enableAddServer()">
+      Enable Add Server
     </button>
+
+    <!--Property binding: .ts > html -->
     <button class="btn btn-primary" [disabled]="isDisabled">
       Add Server
     </button>

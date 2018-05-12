@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <button class="btn btn-primary" (click)="showOddNumbers()">
+      Show Odd Numbers
+    </button>
+
+    <button class="btn btn-primary" (click)="showEvenNumbers()">
+      Show Even Numbers
+    </button>
+
+    <br>
+    <!--{{numbers}}-->
+    <ul>
+      <!--after page loads-->
+      <div *ngIf="isButtonClicked">
+        <div *ngIf="isEven">
+          <li *ngFor="let number of evenNumbers">
+            {{number}}
+          </li>
+        </div>
+        <div *ngIf="!isEven">
+          <li *ngFor="let number of oddNumbers">
+            {{number}}
+          </li>
+        </div>
+      </div>
+
+      <!--on page load-->
+      <div *ngIf="!isButtonClicked">
+        <div *ngIf="isEven">
+          <li *ngFor="let number of numbers">
+            {{number}}
+          </li>
+        </div>
+      </div>
+    </ul>
+
+    <span appBasicHighlight>This is a sample highlighted text</span>
+
+  </div>
+</div>
